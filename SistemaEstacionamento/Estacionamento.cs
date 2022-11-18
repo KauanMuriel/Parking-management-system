@@ -20,6 +20,7 @@ namespace SistemaEstacionamento
 
 		public string PedeDadosVeiculo()
 		{
+			Console.WriteLine();
 			Console.Write("Placa do veiculo: ");
 			return Console.ReadLine();
 
@@ -28,9 +29,18 @@ namespace SistemaEstacionamento
 		public void CadastrarVeiculo()
 		{
 			string placa = PedeDadosVeiculo();
-			DateTime entrada = DateTime.Now;
-			Veiculo vec = new Veiculo(placa, entrada);
-			VeiculosEstacionados.Add(vec);
+
+			if (VeiculosEstacionados.Contains(SelecionarVeiculo(placa))) {
+				Console.WriteLine("Veiculo ja cadastrado no sistema.");
+			} 
+			else
+			{
+				DateTime entrada = DateTime.Now;
+				Veiculo vec = new Veiculo(placa, entrada);
+				VeiculosEstacionados.Add(vec);
+			}
+
+			ConfirmacaoDoUsuario();
 		}
 
 		public void ListarVeiculos()
@@ -42,7 +52,7 @@ namespace SistemaEstacionamento
 			{
 				foreach (Veiculo vec in VeiculosEstacionados)
 				{
-					
+					Console.WriteLine();
 					Console.WriteLine($"Veiculo {count}");
 					Console.WriteLine(vec.ToString());
 					count++;
@@ -53,8 +63,7 @@ namespace SistemaEstacionamento
 				Console.WriteLine("Nenhum veiculo cadastrado");
 			}
 
-			Console.WriteLine("Aperte ENTER para continuar");
-			Console.ReadLine();
+			ConfirmacaoDoUsuario();
 		}
 
 		public void RemoverVeiculo()
@@ -63,8 +72,7 @@ namespace SistemaEstacionamento
 			Veiculo veiculoSelecionado = SelecionarVeiculo(placa);
 			veiculoSelecionado.GeraValorAPagar(PrecoHora, PrecoInicial);
 
-			Console.WriteLine("Aperte ENTER para continuar");
-			Console.ReadLine();
+			ConfirmacaoDoUsuario();
 
 			VeiculosEstacionados.Remove(veiculoSelecionado);
 		}
@@ -72,6 +80,12 @@ namespace SistemaEstacionamento
 		public Veiculo SelecionarVeiculo(string placa)
 		{
 			return VeiculosEstacionados.Find(x => x.Placa == placa);
+		}
+
+		public void ConfirmacaoDoUsuario()
+		{
+			Console.WriteLine("Aperte ENTER para continuar");
+			Console.ReadLine();
 		}
 	}
 }
