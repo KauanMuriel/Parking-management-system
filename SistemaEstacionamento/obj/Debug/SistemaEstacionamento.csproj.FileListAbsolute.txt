@@ -1,0 +1,7 @@
+C:\Users\kauan.silva\source\repos\Projetinho\SistemaEstacionamento\SistemaEstacionamento\bin\Debug\SistemaEstacionamento.exe.config
+C:\Users\kauan.silva\source\repos\Projetinho\SistemaEstacionamento\SistemaEstacionamento\bin\Debug\SistemaEstacionamento.exe
+C:\Users\kauan.silva\source\repos\Projetinho\SistemaEstacionamento\SistemaEstacionamento\bin\Debug\SistemaEstacionamento.pdb
+C:\Users\kauan.silva\source\repos\Projetinho\SistemaEstacionamento\SistemaEstacionamento\obj\Debug\SistemaEstacionamento.csprojAssemblyReference.cache
+C:\Users\kauan.silva\source\repos\Projetinho\SistemaEstacionamento\SistemaEstacionamento\obj\Debug\SistemaEstacionamento.csproj.CoreCompileInputs.cache
+C:\Users\kauan.silva\source\repos\Projetinho\SistemaEstacionamento\SistemaEstacionamento\obj\Debug\SistemaEstacionamento.exe
+C:\Users\kauan.silva\source\repos\Projetinho\SistemaEstacionamento\SistemaEstacionamento\obj\Debug\SistemaEstacionamento.pdb
